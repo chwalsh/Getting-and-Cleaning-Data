@@ -52,5 +52,5 @@ tidy2 <- tidy1 %>% group_by(activity, subject, domain, sensor, summary, directio
   summarize(mean = mean(value))
 
 ## output datasets
-write.table(tidy1, "Tidy_Step4.txt")
-write.table(tidy2, "Tidy_Step5.txt")
+write.table(tidy1, "Tidy_Step4.txt", row.names = FALSE)
+write.table(tidy2, "Tidy_Step5.txt", row.names = FALSE)
