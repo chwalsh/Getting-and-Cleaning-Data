@@ -41,13 +41,16 @@ names(tidy1) <- gsub("\\(|\\)", "", names(tidy1))
 tidy1 <- gather(tidy1, measurement, value, 2:67)
 tidy1 <- separate(tidy1, measurement, into = c("sensor", "summary",
                                                "direction"))
+tidy1 <- separate(tidy1, sensor, into = c("domain", "sensor"), sep = 1)
+tidy1$domain[tidy1$domain == "f"] <- "frequency"
+tidy1$domain[tidy1$domain == "t"] <- "time"
 
 
 ## creates a second tidy data set to display averages for each activity and each 
 ## subject
-tidy2 <- tidy1 %>% group_by(activity, subject, sensor, summary, direction) %>% 
+tidy2 <- tidy1 %>% group_by(activity, subject, domain, sensor, summary, direction) %>% 
   summarize(mean = mean(value))
 
 ## output datasets
-write.csv(tidy1, "Step4.csv")
-write.csv(tidy2, "Step5 (Average Values).csv")
+write.table(tidy1, "Tidy_Step4.txt")
+write.table(tidy2, "Tidy_Step5.txt")
