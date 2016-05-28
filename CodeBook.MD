@@ -1,7 +1,7 @@
 # CodeBook
 
 
-### Original Data
+### Input Data
 
 For each record it is provided:
 
