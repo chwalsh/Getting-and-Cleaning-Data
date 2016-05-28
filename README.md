@@ -9,12 +9,7 @@ This submission contains: 1) a tidy data set as described below, 2) a link to a 
 
 ### Included Files
 
-**run_analysis.R:** The R file that reads UCI HAR data and outputs a tidy data set. The script does the following:
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement via regex
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names.
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+**run_analysis.R:** The R file that reads UCI HAR data and outputs a tidy data set. 
 
 **Tidy_Step5.txt:** The tidy data set with the average of each variable for each activity and each subject referenced in step 5 above.
 
