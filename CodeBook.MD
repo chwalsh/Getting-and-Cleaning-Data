@@ -15,6 +15,7 @@ For each record it is provided:
 ### Transformation
 
 **run_analysis.R** does the following:
+
 1. Merges the training and the test sets to create one data set with names taken from *features.txt*
 2. Extracts only the measurements on the mean and standard deviation for each measurement via regex
 3. Uses descriptive activity names to name the activities in the data set taken from *activity_labels.txt*
